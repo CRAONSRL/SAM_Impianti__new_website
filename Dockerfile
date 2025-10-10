@@ -1,6 +1,9 @@
 # Use the Node.js 20.13.1 base image
 FROM node:20.13.1
 
+# --- Add PNPM (recommended via Corepack) ---
+RUN corepack enable pnpm && corepack install -g pnpm@latest-10
+
 # Set the working directory inside the container
 WORKDIR /src
 
