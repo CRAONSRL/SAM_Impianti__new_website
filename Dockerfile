@@ -1,24 +1,21 @@
 # Use the Node.js 20.13.1 base image
 FROM node:20.13.1
 
-# --- Add PNPM (recommended via Corepack) ---
-RUN corepack enable pnpm && corepack install -g pnpm@latest-10
-
 # Set the working directory inside the container
 WORKDIR /src
 
 # Copy package files and install dependencies
 COPY package*.json ./
-RUN pnpm install
+RUN npm install
 
 # Copy the entire application code
 COPY . .
 
 # Build the application
-RUN pnpm run build
+RUN npm run build
 
 # Expose the port your app runs on
 EXPOSE 3000
 
 # Command to start the application
-CMD ["pnpm", "run start"]
+CMD ["npm", "run start"]
