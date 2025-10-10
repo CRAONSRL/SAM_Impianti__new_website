@@ -14,7 +14,8 @@ const config = {
   appDescription:
     "Impianti elettrici e meccanici in un'unica squadra.",
   // REQUIRED (no https://, not trailing slash at the end, just the naked domain)
-  domainName: "samimpianti.it",
+  // domainName: "samimp.it",
+  domainName: "samimp.app.craon.it",
   // crisp: {
   //   // Crisp website ID. IF YOU DON'T USE CRISP: just remove this => Then add a support email in this config file (resend.supportEmail) otherwise customer support won't work.
   //   id: "",
