@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
     `;
 
     await sendEmail({
-      to: "info@ciao.com",
+      to: "segreteria@samimp.it",
       subject: `Nuovo messaggio dal sito: ${subject}`,
       text: plainText,
       html,

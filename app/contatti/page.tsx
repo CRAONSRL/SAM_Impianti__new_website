@@ -53,7 +53,7 @@ export default function Home() {
       });
 
       if (!response.ok) {
-        const payload = await response.json().catch(() => null);
+        const payload = await response.json().catch(() => ({}));
         throw new Error(payload?.error ?? "Errore durante l'invio del messaggio");
       }
 
