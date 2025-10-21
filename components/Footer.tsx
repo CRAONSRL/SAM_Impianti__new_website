@@ -3,9 +3,6 @@ import Image from "next/image";
 import config from "@/config";
 import icon from "@/app/logo-white.png";
 
-// Add the Footer to the bottom of your landing page and more.
-// The support link is connected to the config.js file. If there's no config.resend.supportEmail, the link won't be displayed.
-
 const Footer = () => {
   return (
     <footer className="bg-[#043C48] border-t border-base-content/10">
@@ -25,17 +22,11 @@ const Footer = () => {
                 width={250}
                 height={250}
               />
-              {/* <strong className="font-extrabold tracking-tight text-base md:text-lg">
-                {config.appName}
-              </strong> */}
             </Link>
 
-            {/* <p className="mt-3 text-sm text-white">
-              {config.appDescription}
-            </p> */}
             <p className="hidden lg:block mt-3 text-sm text-white/60">
-              {/* Copyright © {new Date().getFullYear()} - All rights reserved */}
-              © 2025 All rights reserved.<br/>Terms of use and Privacy Policy<br />Designed By&nbsp;
+              Copyright © {new Date().getFullYear()} - All rights reserved<br/>
+              Terms of use and Privacy Policy<br />Designed By&nbsp;
               <Link href="https://www.officinacreativa25.com" target="_blank" className="text-white">Officina Creativa 25</Link> &&nbsp; 
               <Link href="https://www.craon.it" target="_blank" className="text-white">Craon S.r.l.</Link>
             </p>
@@ -67,17 +58,22 @@ const Footer = () => {
             </div>
 
             <div className="lg:w-1/4 w-full px-4">
+              <div className="text-white text-sm md:text-left mb-2">
+                Contatti:
+              </div>
+
               <div className="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm">
-                <span className="new-line text-white text-sm md:text-left -mt-1">Telefono 039/648451</span>
-                <span className="new-line text-white text-sm md:text-left -mt-1">Email: segreteria@samimp.it</span>
+                <span className="new-line text-white text-sm md:text-left -mt-1">039 648 451</span>
+                <span className="new-line text-white text-sm md:text-left -mt-1">segreteria@samimp.it</span>
                 <span className="new-line text-white text-sm md:text-left -mt-1">P.IVA 10314060962</span>
               </div>
             </div>
+
           </div>
 
           <div className="lg:hidden flex flex-row justify-center items-center gap-2 text-center mt-10">
             <p className="mt-3 text-sm text-white/60">
-              {/* Copyright © {new Date().getFullYear()} - All rights reserved */}
+              Copyright © {new Date().getFullYear()} - All rights reserved<br/>
               Terms of use and Privacy Policy<br />Designed By&nbsp;
               <Link href="https://www.officinacreativa25.com" target="_blank" className="text-white">Officina Creativa 25</Link> &&nbsp; 
               <Link href="https://www.craon.it" target="_blank" className="text-white">Craon S.r.l.</Link>

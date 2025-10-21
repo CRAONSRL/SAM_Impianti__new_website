@@ -21,8 +21,24 @@ const nextConfig = {
         protocol: "https",
         hostname: "logos-world.net",
       },
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "3000",
+      },
+      {
+        protocol: "http",
+        hostname: "127.0.0.1",
+        port: "3000", 
+      }
     ],
   },
+  allowedDevOrigins: [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'http://127.0.0.0.1',
+    'http://localhost'
+  ],
   webpack: (config, { webpack, isServer }) => {
     // Ignore MongoDB's optional dependencies to prevent build warnings
     if (isServer) {

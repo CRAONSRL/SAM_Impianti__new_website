@@ -1,6 +1,7 @@
 import Image from "next/image";
 import logoGiallo from "@/app/images/home/logo-giallo.png";
 import logoAzzurro from "@/app/images/home/logo-azzurro.png";
+import Link from "next/link";
 
 const ImpiantiMeccaniciElettrici = () => {
   return (
@@ -13,18 +14,18 @@ const ImpiantiMeccaniciElettrici = () => {
     }}>
       
       <div className="flex lg:flex-row flex-col max-w-7xl mx-auto gap-10 lg:gap-14 items-center justify-center text-center lg:text-center lg:items-center">
-        <div className="h-[450px] w-[450px] bg-white flex items-center justify-center flex-col">
-          <Image src={logoAzzurro} alt="Impianti Meccanici" width={100} height={100} className="mb-10" />
-          <h2 className="text-[40px] text-[#043C48]">
-            impianti<br/>MECCANICI
-          </h2>
-        </div>
-        <div className="h-[450px] w-[450px] bg-white flex items-center justify-center flex-col">
+        <Link href="/elettrico" className="h-[450px] w-[450px] bg-white flex items-center justify-center flex-col">
           <Image src={logoGiallo} alt="Impianti Elettrici" width={100} height={100} className="mb-10"/>
           <h2 className="text-[40px] text-[#043C48]">
             impianti<br/>ELETTRICI
           </h2>
-        </div>
+        </Link>
+        <Link href="/meccanico" className="h-[450px] w-[450px] bg-white flex items-center justify-center flex-col">
+          <Image src={logoAzzurro} alt="Impianti Meccanici" width={100} height={100} className="mb-10" />
+          <h2 className="text-[40px] text-[#043C48]">
+            impianti<br/>MECCANICI
+          </h2>
+        </Link>
       </div>
       
     </section>
