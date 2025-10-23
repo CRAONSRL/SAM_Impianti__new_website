@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  output: "standalone",
   reactStrictMode: true,
   images: {
     remotePatterns: [
@@ -29,22 +29,23 @@ const nextConfig = {
       {
         protocol: "http",
         hostname: "127.0.0.1",
-        port: "3000", 
-      }
+        port: "3000",
+      },
     ],
   },
   allowedDevOrigins: [
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
-    'http://127.0.0.0.1',
-    'http://localhost'
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.0.1",
+    "http://localhost",
   ],
   webpack: (config, { webpack, isServer }) => {
     // Ignore MongoDB's optional dependencies to prevent build warnings
     if (isServer) {
       config.plugins.push(
         new webpack.IgnorePlugin({
-          resourceRegExp: /^(kerberos|@mongodb-js\/zstd|@aws-sdk\/credential-providers|gcp-metadata|snappy|socks|aws4|mongodb-client-encryption)$/,
+          resourceRegExp:
+            /^(kerberos|@mongodb-js\/zstd|@aws-sdk\/credential-providers|gcp-metadata|snappy|socks|aws4|mongodb-client-encryption)$/,
         })
       );
     }
