@@ -2,9 +2,10 @@ import React from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 import useEmblaCarousel from 'embla-carousel-react'
+import Image from 'next/image'
 
 type PropType = {
-  slides: number[]
+  slides: string[]
   options?: EmblaOptionsType
 }
 
@@ -20,8 +21,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((index) => (
+            console.log(index),
             <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
+              <div className="embla__slide__number">
+                <Image src={index} alt={`Slide ${index}`} layout="fill" objectFit="cover" />
+              </div>
             </div>
           ))}
         </div>

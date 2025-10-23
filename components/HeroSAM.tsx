@@ -13,14 +13,14 @@ const HeroSAM = () => {
       backgroundRepeat: 'no-repeat'
     }}>
       
-      <div className="flex flex-col max-w-7xl mx-auto  gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start">
+      <div className="flex flex-col max-w-5xl mx-auto  gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start">
         <h1 className="text-white text-[41px] font-semibold">
-        IMPIANTI ELETTRICI E MECCANICI IN UN’UNICA SQUADRA
+        IMPIANTI ELETTRICI E MECCANICI<br/>IN UN’UNICA SQUADRA
         </h1>
         <p className="text-white text-[23px]">
         Ci occupiamo della realizzazione e manutenzione di impianti industriali e residenziali nel settore idraulico,
-        climatizzazione, riscaldamento, gas, antincendio ed elettrico.<br/>Competenza professionale e solido background ci permettono di curare l’esecuzione delle opere fino al<br/>collaudo finale.<br/>
-<span className="font-semibold">Progettiamo soluzioni per aziende, privati e Pubbliche Amministrazioni, garantendo sempre la stessa<br/>attenzione e qualità.</span>
+        climatizzazione, riscaldamento, gas, antincendio ed elettrico.<br/>Competenza professionale e solido background ci permettono di curare l’esecuzione delle opere fino al collaudo finale.<br/>
+<span className="font-semibold">Progettiamo soluzioni per aziende, privati e Pubbliche Amministrazioni, garantendo sempre la stessa attenzione e qualità.</span>
         </p>
       </div>
       

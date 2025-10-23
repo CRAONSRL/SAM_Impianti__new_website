@@ -5,17 +5,35 @@ import EmblaCarousel from "./embla/EmblaCarousel";
 import './embla/embla.css'
 
 const OPTIONS: EmblaOptionsType = {
-  align: 'end',
+  align: 'start',
   dragFree: true,
   direction: 'rtl',
   loop: true
 }
-const SLIDE_COUNT = Math.floor(Math.random() * 5) + 5
-const SLIDE_COUNT_2 = Math.floor(Math.random() * 5) + 5
-const SLIDE_COUNT_3 = Math.floor(Math.random() * 5) + 5
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-const SLIDES_2 = Array.from(Array(SLIDE_COUNT_2).keys())
-const SLIDES_3 = Array.from(Array(SLIDE_COUNT_3).keys())
+
+const SLIDES = [
+  '/images/team-idraulico/001.jpeg',
+  '/images/team-idraulico/002.jpeg',
+  '/images/team-idraulico/003.jpeg',
+  '/images/team-idraulico/004.jpeg',
+  '/images/team-idraulico/005.jpeg',
+  '/images/team-idraulico/006.jpeg',
+];
+const SLIDES_2 = [
+  '/images/team-elettrico/004.jpeg',
+  '/images/team-elettrico/003.jpeg',
+  '/images/team-elettrico/002.jpeg',
+  '/images/team-elettrico/001.jpeg',
+];
+const SLIDES_3 = [
+  '/images/team-amministrativo/001.jpeg',
+  '/images/team-amministrativo/002.jpeg',
+  '/images/team-amministrativo/003.jpeg',
+  '/images/team-amministrativo/004.jpeg',
+  '/images/team-amministrativo/005.jpeg',
+  '/images/team-amministrativo/006.jpeg',
+  '/images/team-amministrativo/007.jpeg',
+];
 
 const TeamSlides = () => {
   return (

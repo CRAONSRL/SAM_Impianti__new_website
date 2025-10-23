@@ -1,0 +1,9 @@
+name: test dex 123
+tipo: nuovo-impianto
+sotto_tipo: residenziale
+date: 2025-10-07
+content: 'ccvzvczxz ag adfsd sdf gsdf '
+immagini:
+  - immagine: images/impianti-meccanici/test-dex-123/immagini/0/immagine.jpeg
+  - immagine: images/impianti-meccanici/test-dex-123/immagini/1/immagine.jpeg
+  - immagine: images/impianti-meccanici/test-dex-123/immagini/2/immagine.jpg

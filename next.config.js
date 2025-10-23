@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
   images: {
+
     remotePatterns: [
       // NextJS <Image> component needs to whitelist domains for src={}
       {
@@ -30,14 +31,23 @@ const nextConfig = {
         protocol: "http",
         hostname: "127.0.0.1",
         port: "3000", 
+      },
+      {
+        protocol: "http",
+        hostname: "0.0.0.0",
+        port: "3000", 
       }
     ],
   },
   allowedDevOrigins: [
+    'http://0.0.0.0:3000',
     'http://localhost:3000',
     'http://127.0.0.1:3000',
     'http://127.0.0.0.1',
-    'http://localhost'
+    'http://localhost',
+    'http://0.0.0.0',
+    'http://sampimp.it',
+    'http://sampimp.app.craon.it'
   ],
   webpack: (config, { webpack, isServer }) => {
     // Ignore MongoDB's optional dependencies to prevent build warnings

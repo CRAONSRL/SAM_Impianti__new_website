@@ -9,7 +9,7 @@ export default config({
     impiantiElettrici: collection({
       label: 'Impianti Elettrici',
       slugField: 'name',
-      path: 'app/data/impianti-elettrici/*',
+      path: 'public/data/impianti-elettrici/*',
       schema: {
         name: fields.slug({ name: { label: 'Nome' } }),
         tipo: fields.select({
@@ -46,7 +46,7 @@ export default config({
     impiantiMeccanici: collection({
       label: 'Impianti Meccanici',
       slugField: 'name',
-      path: 'app/data/impianti-meccanici/*',
+      path: 'public/data/impianti-meccanici/*',
       schema: {
         name: fields.slug({ name: { label: 'Nome' } }),
         tipo: fields.select({

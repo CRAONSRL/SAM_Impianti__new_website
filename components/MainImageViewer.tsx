@@ -15,6 +15,7 @@ export default function MainImageViewer({ alt, width, height, className }: MainI
 
   return (
     <Image 
+      unoptimized
       src={currentImage} 
       alt={alt} 
       width={width} 

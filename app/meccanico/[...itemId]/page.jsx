@@ -1,4 +1,7 @@
+'no-cache';
+
 import { Suspense } from 'react'
+import { notFound } from 'next/navigation'
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LeftMenu from '@/components/LeftMenu';
@@ -9,32 +12,65 @@ import { ImageProvider } from '@/contexts/ImageContext';
 import keystaticConfig from '@/keystatic.config';
 import { createReader } from "@keystatic/core/reader";
 
+export const dynamicParams = true;
+export const revalidate = 0; // Disabilita la cache per il revalidation dinamico
+
 const reader = createReader(process.cwd(), keystaticConfig);
 
 async function getData(itemId) {
   let theSlug;
-    if (Array.isArray(itemId) && itemId.length > 0) {
-      // Prendi l'ultimo elemento come nome dell'impianto
-      theSlug = itemId[itemId.length - 1];
-    } else {
-      return null;
-    }
+  if (Array.isArray(itemId) && itemId.length > 0) {
+    // Prendi l'ultimo elemento come nome dell'impianto
+    theSlug = itemId[itemId.length - 1];
+  } else {
+    return null;
+  }
+  
   console.log('theSlug', theSlug);
   theSlug = decodeURIComponent(theSlug);
   theSlug = theSlug.replace(/[^a-zA-Z0-9-_]/g, '-').toLowerCase();
 
-  const data = await reader.collections.impiantiMeccanici.read(theSlug);
-  return data;
+  try {
+    const data = await reader.collections.impiantiMeccanici.read(theSlug, { resolveLinkedFiles: true });
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return null;
+  }
 }
 
-export default async function Page({params}) {
+// Genera metadata dinamici per SEO
+export async function generateMetadata({ params }) {
+  const { itemId } = params;
+  const item = await getData(itemId);
+  
+  if (!item) {
+    return {
+      title: 'Impianto non trovato - SAM Impianti'
+    };
+  }
+
+  return {
+    title: `${item.name} - Impianti Meccanici - SAM Impianti`,
+    description: item.content?.substring(0, 160) || 'Impianto meccanico SAM Impianti',
+    openGraph: {
+      title: `${item.name} - SAM Impianti`,
+      description: item.content?.substring(0, 160) || 'Impianto meccanico SAM Impianti',
+      images: item.immagini && item.immagini.length > 0 
+        ? [`/${item.immagini[0].immagine}`]
+        : ['/images/meccanico.jpg'],
+    },
+  };
+}
+
+export default async function Page({ params }) {
   const { itemId } = params;
   const item = await getData(itemId);
 
-  // Se non trova l'item, mostra 404
+  // Se non trova l'item, usa la funzione notFound() di Next.js
   if (!item) {
     console.log('Item not found, showing 404');
-    return <div>404 - Item not found</div>;
+    notFound();
   }
   
   // Determina l'immagine iniziale
@@ -61,13 +97,13 @@ export default async function Page({params}) {
         
         <section className='w-full h-50 p-4 bg-[#008DAA] flex flex-row'>
           <div className='w-1/6'>&nbsp;</div>
-          <div className='w-2/6'>
-            {item.name}<br />
-            <time dateTime={item.date}>{new Date(item.date).toLocaleDateString('it-IT')}</time><br />
+          <div className='w-2/6 text-white'>
+            <h3 className='text-white text-2xl font-medium'>{item.name}</h3>
+            {/* <br /><time dateTime={item.date}>{new Date(item.date).toLocaleDateString('it-IT')}</time><br /> */}
             {item.content}<br />
           </div>
           {item.immagini && item.immagini.length > 0 && (
-            <ImageGallery images={item.immagini} />
+            <ImageGallery images={item.immagini} selectedColor="#DBDC37" />
           )}
         </section>
         
@@ -76,78 +112,3 @@ export default async function Page({params}) {
     </ImageProvider>
   )
 }
-
-
-
-// import { Suspense } from 'react'
-// import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
-// import LeftMenu from '@/components/LeftMenu';
-
-// import keystaticConfig from '@/keystatic.config';
-// import { createReader } from "@keystatic/core/reader";
-// import Image from 'next/image';
-
-// const reader = createReader(process.cwd(), keystaticConfig);
-// var currentImage = '/images/meccanico.jpg';
-
-// async function getData(itemId) {
-//   let theSlug;
-//     if (Array.isArray(itemId) && itemId.length > 0) {
-//       // Prendi l'ultimo elemento come nome dell'impianto
-//       theSlug = itemId[itemId.length - 1];
-//     } else {
-//       return null;
-//     }
-  
-//   theSlug = decodeURIComponent(theSlug);
-//   theSlug = theSlug.replace(/[^a-zA-Z0-9-_]/g, '-').toLowerCase();
-//   console.log('theSlug', theSlug);
-//   const data = await reader.collections.impiantiMeccanici.read(theSlug);
-//   return data;
-// }
-
-// export default async function Page({params}) {
-
-//   const { itemId } = params;
-
-//   const item = await getData(itemId);
-
-//   // Se non trova l'item, mostra 404
-//   if (!item) {
-//     console.log('Item not found, showing 404');
-//   }
-  
-//   if (item.immagini && item.immagini.length > 0) {
-//       currentImage = `/${item.immagini[0].immagine}`;
-//   }
-  
-//   return (
-//     <>
-//       <Suspense>
-//         <Header currentPage="/meccanico" />
-        
-//       <main className='flex flex-col lg:flex-row lg:max-w-full max-w-7xl mx-auto'>
-//         <LeftMenu typeOfEntry="impiantiMeccanici" />
-//         <section className='w-3/4'>
-//           <Image src={currentImage} alt='' width={1000} height={500} className="object-cover" />
-//         </section>
-//       </main>
-//       <section className='w-full h-50 p-4 bg-[#008DAA] flex flex-row'>
-//         <div className='w-1/6'>&nbsp;</div>
-//         <div className='w-2/6'>
-//           {item.name}<br />
-//           <time dateTime={item.date}>{new Date(item.date).toLocaleDateString('it-IT')}</time><br />
-//           {item.content}<br />
-//         </div>
-//         <div className='w-3/6 text-left overflow-scroll whitespace-nowrap'>
-//           {item.immagini && item.immagini.map((photo, index) => (
-//             <Image key={index} src={`/${photo.immagine}`} width={100} height={100} alt=''  className="inline-block w-36 h-36 object-cover m-1" />
-//           ))}
-//         </div>
-//       </section>
-//     <Footer />
-//     </Suspense>
-//     </>
-//   )
-// }
