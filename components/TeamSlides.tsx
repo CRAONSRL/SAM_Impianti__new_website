@@ -43,15 +43,15 @@ const TeamSlides = () => {
       </h2>
       <div className="flex flex-col max-w-7xl mx-auto gap-3 lg:gap-5 bg-white w-full">
         <h2 className="text-[27px] font-bold text-[#008DAA]">Team Meccanica</h2>
-        <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+        <EmblaCarousel slides={SLIDES} options={OPTIONS} typeName="meccanica" autoClickDotIndex={1} />
       </div>
       <div className="flex flex-col max-w-7xl mx-auto gap-3 lg:gap-5 bg-white w-full">
         <h2 className="text-[27px] font-bold text-[#008DAA]">Team Elettrico</h2>
-        <EmblaCarousel slides={SLIDES_2} options={OPTIONS} />
+        <EmblaCarousel slides={SLIDES_2} options={OPTIONS} typeName="elettrico" autoClickDotIndex={3} />
       </div>
       <div className="flex flex-col max-w-7xl mx-auto gap-3 lg:gap-5 bg-white w-full">
         <h2 className="text-[27px] font-bold text-[#008DAA]">Amministrazione</h2>
-        <EmblaCarousel slides={SLIDES_3} options={OPTIONS} />
+        <EmblaCarousel slides={SLIDES_3} options={OPTIONS} typeName="amministrazione" autoClickDotIndex={5} />
       </div>
     </section>
   );

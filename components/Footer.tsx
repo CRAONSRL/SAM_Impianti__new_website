@@ -51,7 +51,7 @@ const Footer = () => {
               </div>
 
               <div className="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm">
-                <span className="new-line text-white text-sm md:text-left -mt-1">Via G. de Castilla</span>
+                <span className="new-line text-white text-sm md:text-left -mt-1">Via G. de Castilla, 7</span>
                 <span className="new-line text-white text-sm md:text-left -mt-1">Vimercate</span>
                 <span className="new-line text-white text-sm md:text-left -mt-1">20871 (MB) Italia</span>
               </div>

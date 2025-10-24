@@ -96,14 +96,14 @@ export default function Home() {
                 SAM impianti srl
               </h2>
               <p className="mt-3 text-md leading-relaxed">
-                Via I° Maggio, 87,
+                Via G. de Castillia, 7
                 <br />
-                Concorezzo
+                Vimercate
                 <br />
-                20863 (MB) Italia
+                20871 (MB) Italia
               </p>
               <p className="mt-4 text-md leading-relaxed">
-                039/649 07 434
+                039 648 451
                 <br />
                 segreteria@samimp.it
               </p>

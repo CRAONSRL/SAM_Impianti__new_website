@@ -9,6 +9,7 @@ import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "react-hot-toast";
 import { Tooltip } from "react-tooltip";
 import config from "@/config";
+import ScrollToTop from "./ScrollToTop";
 
 // Crisp customer chat support:
 // This component is separated from ClientLayout because it needs to be wrapped with <SessionProvider> to use useSession() hook
@@ -51,6 +52,7 @@ const CrispChat = (): null => {
 // 3. Toaster: Show Success/Error messages anywhere from the app with toast()
 // 4. Tooltip: Show a tooltip if any JSX element has these 2 attributes: data-tooltip-id="tooltip" data-tooltip-content=""
 // 5. CrispChat: Set Crisp customer chat support (see above)
+// 6. ScrollToTop: Floating button to scroll back to top
 const ClientLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
@@ -60,6 +62,9 @@ const ClientLayout = ({ children }: { children: ReactNode }) => {
 
         {/* Content inside app/page.js files  */}
         {children}
+
+        {/* Floating scroll to top button */}
+        <ScrollToTop />
 
         {/* Show Success/Error messages anywhere from the app with toast() */}
         <Toaster
