@@ -10,6 +10,7 @@ import bgElettrico from "@/app/images/elettrico/bg-elettrico.jpeg";
 import downloadImg from "@/app/images/chi-siamo/download.png";
 import handStamp from "@/app/images/certificazioni/hand-stamp.jpeg";
 import textureLogoBianco from "@/app/images/chi-siamo/texture-logo-bianco.png";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -38,35 +39,35 @@ export default function Home() {
           <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-12">
             <div className="flex flex-col items-center gap-6">
               <div className="flex h-36 w-36 items-center justify-center rounded-full bg-white text-center text-[#7A7A7A] text-sm font-semibold uppercase tracking-widest">
-                LOGO
-                <br />
-                CERT.
+                <Image src="/files/certifications/ISO/BVCER_withAccredia-ISO 9001.png" alt="Certification" width={140} height={140} />
               </div>
-              <button className="rounded-full border border-[#00A5BF] px-8 py-2 text-sm font-semibold lowercase text-[#00A5BF] shadow-sm cursor-pointer">
-                scarica
-              </button>
+              <Link href="/files/certifications/ISO/CERTIFICATO_2023_SAM IMPIANTI SRL- ISO9001.pdf" target="_blank" rel="noopener noreferrer">
+                <button className="rounded-full border border-[#00A5BF] px-8 py-2 text-sm font-semibold lowercase text-[#00A5BF] shadow-sm cursor-pointer">
+                  scarica
+                </button>
+              </Link>
             </div>
 
             <div className="flex flex-col items-center gap-6">
               <div className="flex h-36 w-36 items-center justify-center rounded-full bg-white text-center text-[#7A7A7A] text-sm font-semibold uppercase tracking-widest">
-                LOGO
-                <br />
-                CERT.
+                <Image src="/files/certifications/SOA/soalaghi___organismo_di_attestazione___spa_logo.jpeg" alt="Certification" width={100} height={100} />
               </div>
-              <button className="rounded-full border border-[#00A5BF] px-8 py-2 text-sm font-semibold lowercase text-[#00A5BF] shadow-sm cursor-pointer">
-                scarica
-              </button>
+              <Link href="/files/certifications/SOA/00_SOA attestazione.pdf" target="_blank" rel="noopener noreferrer">
+                <button className="rounded-full border border-[#00A5BF] px-8 py-2 text-sm font-semibold lowercase text-[#00A5BF] shadow-sm cursor-pointer">
+                  scarica
+                </button>
+              </Link>
             </div>
 
             <div className="flex flex-col items-center gap-6">
               <div className="flex h-36 w-36 items-center justify-center rounded-full bg-white text-center text-[#7A7A7A] text-sm font-semibold uppercase tracking-widest">
-                LOGO
-                <br />
-                CERT.
+                <Image src="/files/certifications/AFOCERT/afocert-logo.png" alt="Certification" width={130} height={130} />
               </div>
-              <button className="rounded-full border border-[#00A5BF] px-8 py-2 text-sm font-semibold lowercase text-[#00A5BF] shadow-sm cursor-pointer">
-                scarica
-              </button>
+              <Link href="/files/certifications/AFOCERT/certificato AFORCERT_scad.2029_AFC-I0247.pdf" target="_blank" rel="noopener noreferrer">
+                <button className="rounded-full border border-[#00A5BF] px-8 py-2 text-sm font-semibold lowercase text-[#00A5BF] shadow-sm cursor-pointer">
+                  scarica
+                </button>
+              </Link>
             </div>
           </div>
         </div>

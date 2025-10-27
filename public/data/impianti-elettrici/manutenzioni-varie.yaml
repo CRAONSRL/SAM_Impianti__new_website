@@ -1,0 +1,10 @@
+name: Manutenzioni Varie
+tipo: manutenzione
+sotto_tipo: residenziale
+date: 2025-10-27
+content: Alcune delle nostre manutenzioni
+immagini:
+  - immagine: images/impianti-elettrici/manutenzioni-varie/immagini/0/immagine.jpeg
+  - immagine: images/impianti-elettrici/manutenzioni-varie/immagini/1/immagine.jpeg
+  - immagine: images/impianti-elettrici/manutenzioni-varie/immagini/2/immagine.jpeg
+  - immagine: images/impianti-elettrici/manutenzioni-varie/immagini/3/immagine.jpeg

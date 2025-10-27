@@ -7,7 +7,7 @@ import './embla/embla.css'
 const OPTIONS: EmblaOptionsType = {
   align: 'start',
   dragFree: true,
-  direction: 'rtl',
+  direction: 'ltr',
   loop: true
 }
 
@@ -42,16 +42,16 @@ const TeamSlides = () => {
         La squadra
       </h2>
       <div className="flex flex-col max-w-7xl mx-auto gap-3 lg:gap-5 bg-white w-full">
-        <h2 className="text-[27px] font-bold text-[#008DAA]">Team Meccanica</h2>
-        <EmblaCarousel slides={SLIDES} options={OPTIONS} typeName="meccanica" autoClickDotIndex={1} />
+        <h2 className="text-[27px] font-bold text-[#008DAA]">Team Impianti Meccanici</h2>
+        <EmblaCarousel slides={SLIDES} options={OPTIONS} typeName="meccanica" autoClickDotIndex={0} />
       </div>
       <div className="flex flex-col max-w-7xl mx-auto gap-3 lg:gap-5 bg-white w-full">
-        <h2 className="text-[27px] font-bold text-[#008DAA]">Team Elettrico</h2>
-        <EmblaCarousel slides={SLIDES_2} options={OPTIONS} typeName="elettrico" autoClickDotIndex={3} />
+        <h2 className="text-[27px] font-bold text-[#008DAA]">Team Impianti Elettrici</h2>
+        <EmblaCarousel slides={SLIDES_2} options={OPTIONS} typeName="elettrico" autoClickDotIndex={0} />
       </div>
       <div className="flex flex-col max-w-7xl mx-auto gap-3 lg:gap-5 bg-white w-full">
-        <h2 className="text-[27px] font-bold text-[#008DAA]">Amministrazione</h2>
-        <EmblaCarousel slides={SLIDES_3} options={OPTIONS} typeName="amministrazione" autoClickDotIndex={5} />
+        <h2 className="text-[27px] font-bold text-[#008DAA]">Uffici</h2>
+        <EmblaCarousel slides={SLIDES_3} options={OPTIONS} typeName="amministrazione" autoClickDotIndex={0} />
       </div>
     </section>
   );

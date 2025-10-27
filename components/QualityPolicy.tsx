@@ -21,7 +21,7 @@ const QualityPolicy = () => {
             <h2 className="text-[39px] text-white text-left font-normal">Politica<br/>di Qualità</h2>
           </div>
           <div className="w-1/2">
-            <Link href="/public/files/Politica_della_Qualita_SAM_IMPIANTI_2023.pdf" target="_blank" download>
+            <Link href="/files/Politica_della_Qualita_SAM_IMPIANTI_2023.pdf" target="_blank" download>
             <div className="h-[180px] w-[180px] bg-white rounded-full">
               <div className="flex flex-col items-center justify-center h-full w-full">
                 <Image src={donwload} alt="Download" width={75} height={75} />

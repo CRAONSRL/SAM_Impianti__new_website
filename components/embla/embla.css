@@ -17,8 +17,7 @@
     transform: translate3d(0, 0, 0);
     flex: 0 0 var(--slide-size);
     min-width: 0;
-    /* padding-right: var(--slide-spacing); */
-    margin: var(--slide-spacing)
+    margin-right: var(--slide-spacing);
   }
   .embla__slide__number {
     /* box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast); */
@@ -32,9 +31,8 @@
     user-select: none;
   }
   .embla__controls {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: space-between;
+    display: flex;
+    justify-content: flex-end;
     gap: 1.2rem;
     margin-top: 1.8rem;
   }
@@ -79,4 +77,3 @@
   .embla__dot--selected:after {
     box-shadow: inset 0 0 0 0.2rem #008DAA;
   }
-  

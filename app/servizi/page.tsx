@@ -119,7 +119,7 @@ export default function Home() {
           </article>
         </div>
       </main>
-      <section className="w-full bg-[#008DAA]">
+      <section className="w-full bg-[#008DAA] hidden">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-12 px-6 py-16 text-white lg:flex-row lg:px-10 lg:py-20">
           <div className="flex w-full justify-center lg:w-auto lg:justify-start">
             <Image

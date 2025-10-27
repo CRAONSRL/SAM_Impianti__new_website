@@ -13,7 +13,7 @@ export default function Home() {
       <Suspense>
         <Header currentPage="/meccanico" />
       </Suspense>
-      <main className='flex flex-col lg:flex-row lg:max-w-full max-w-7xl mx-auto'>
+      <main className='flex flex-col lg:flex-row max-w-7xl mx-auto'>
         <LeftMenu typeOfEntry="impiantiMeccanici" />
         <section className='w-3/4 p-4' style={{
           backgroundImage: `linear-gradient(to right, rgba(0, 141, 170, 0.80), rgba(0, 141, 170, 0.80)), url(${bgMeccanico.src})`,

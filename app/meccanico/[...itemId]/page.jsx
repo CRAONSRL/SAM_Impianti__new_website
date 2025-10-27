@@ -83,7 +83,7 @@ export default async function Page({ params }) {
       <Suspense>
         <Header currentPage="/meccanico" />
         
-        <main className='flex flex-col lg:flex-row lg:max-w-full max-w-7xl mx-auto'>
+        <main className='flex flex-col lg:flex-row max-w-7xl mx-auto'>
           <LeftMenu typeOfEntry="impiantiMeccanici" />
           <section className='w-3/4'>
             <MainImageViewer 

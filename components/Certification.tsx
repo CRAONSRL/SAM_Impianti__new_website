@@ -13,13 +13,13 @@ const Certification = () => {
         </div>
         <div className="w-2/3 flex lg:flex-row flex-col gap-10">
           <div className="w-[200px] h-[200px] bg-white rounded-[100px] flex items-center justify-center">
-            <Image src={logo} alt="Certification" width={100} height={100} />
+            <Image src="/files/certifications/ISO/BVCER_withAccredia-ISO 9001.png" alt="Certification" width={190} height={190} />
           </div>
           <div className="w-[200px] h-[200px] bg-white rounded-[100px] flex items-center justify-center">
-            <Image src={logo} alt="Certification" width={100} height={100} />
+            <Image src="/files/certifications/SOA/soalaghi___organismo_di_attestazione___spa_logo.jpeg" alt="Certification" width={140} height={140} />
           </div>
           <div className="w-[200px] h-[200px] bg-white rounded-[100px] flex items-center justify-center">
-            <Image src={logo} alt="Certification" width={100} height={100} />
+            <Image src="/files/certifications/AFOCERT/afocert-logo.png" alt="Certification" width={190} height={190} />
           </div>
         </div>
       </div>
