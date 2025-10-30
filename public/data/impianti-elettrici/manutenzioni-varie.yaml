@@ -2,7 +2,12 @@ name: Manutenzioni Varie
 tipo: manutenzione
 sotto_tipo: residenziale
 date: 2025-10-27
-content: Alcune delle nostre manutenzioni
+content: >-
+  Alcune delle nostre manutenzioni di impianti video citofonici, automazione
+  cancelli, video sorveglianza,
+
+  rivelazione fumi e incendi, sistemi d’allarmi, impianti fotovoltaici, Tv e
+  FTTH e allestimenti fieristici
 immagini:
   - immagine: images/impianti-elettrici/manutenzioni-varie/immagini/0/immagine.jpeg
   - immagine: images/impianti-elettrici/manutenzioni-varie/immagini/1/immagine.jpeg

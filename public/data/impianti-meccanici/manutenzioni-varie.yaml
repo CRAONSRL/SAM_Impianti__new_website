@@ -2,7 +2,11 @@ name: Manutenzioni Varie
 tipo: manutenzione
 sotto_tipo: residenziale
 date: 2025-10-27
-content: Alcune delle nostre manutenzioni
+content: >-
+  Alcune delle nostre manutenzioni dei sistemi per la produzione di acqua calda
+  sanitaria,
+
+  raffrescamento, raffreddamento e deumidificazione, gestiti anche da remoto
 immagini:
   - immagine: images/impianti-meccanici/manutenzioni-varie/immagini/0/immagine.jpeg
   - immagine: images/impianti-meccanici/manutenzioni-varie/immagini/1/immagine.jpeg

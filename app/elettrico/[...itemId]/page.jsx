@@ -93,7 +93,7 @@ export default async function Page({ params }) {
         </main>
         
         <section className='w-full h-50 p-4 bg-[#DBDC37] flex flex-row'>
-          <div className='w-1/6'>&nbsp;</div>
+          <div className='flex flex-row mx-auto w-7xl max-w-7xl'>
           <div className='w-2/6 text-gray-800'>
             <h3 className='text-gray-800 text-2xl font-medium'>{item.name}</h3>
             {/* <br /><time dateTime={item.date}>{new Date(item.date).toLocaleDateString('it-IT')}</time><br /> */}
@@ -102,6 +102,7 @@ export default async function Page({ params }) {
           {item.immagini && item.immagini.length > 0 && (
             <ImageGallery images={item.immagini} selectedColor="#008DAA" />
           )}
+          </div>
         </section>
         
         <Footer />

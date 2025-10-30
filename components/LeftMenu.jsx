@@ -147,7 +147,7 @@ export default function LeftMenu({ typeOfEntry }) {
 					<h3 className="font-bold text-[#008DAA] mb-3">{section.label}</h3>
 					{section.children.map((category, categoryIndex) => (
 						<div key={categoryIndex} className="mb-4 ml-2">
-							<h4 className="font-medium text-[#008DAA] mb-2">{category.label}</h4>
+							<h4 className="font-medium text-[#008DAA] mb-2">{category.label + (section.label === 'MANUTENZIONE' && typeOfEntry === 'impiantiMeccanici' ? '/Industriali' : '') }</h4>
 							<ul className="space-y-1">
 								{category.children.map((item, itemIndex) => (
 									<li key={itemIndex}>
