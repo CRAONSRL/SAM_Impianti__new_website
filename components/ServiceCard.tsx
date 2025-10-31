@@ -35,7 +35,7 @@ const ServiceCard = ({
   return (
     <div
       className={mergeClasses(
-        "relative flex flex-col items-center gap-6 bg-white px-8 pb-10 pt-16 text-center shadow-xl m-2",
+        "relative flex w-full flex-col items-center gap-6 bg-white px-6 sm:px-8 pb-8 sm:pb-10 pt-16 text-center shadow-xl",
         className,
       )}
     >

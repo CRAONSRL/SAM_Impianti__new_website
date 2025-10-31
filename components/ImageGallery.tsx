@@ -22,7 +22,7 @@ export default function ImageGallery({ images, selectedColor }: ImageGalleryProp
   };
 
   return (
-    <div className='w-4/6 text-left overflow-scroll whitespace-nowrap'>
+    <div className='w-full lg:w-4/6 text-left overflow-x-auto whitespace-nowrap pb-2'>
       {images.map((photo, index) => (
         <Image 
           unoptimized

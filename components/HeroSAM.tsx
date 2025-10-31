@@ -5,7 +5,7 @@ import topBanner from "@/app/images/home/top-banner.jpeg";
 
 const HeroSAM = () => {
   return (
-    <section className="w-full flex flex-col lg:flex-row gap-16 lg:gap-20 px-8 py-8 lg:py-20 relative"
+    <section className="w-full flex flex-col lg:flex-row gap-10 lg:gap-20 px-6 sm:px-8 py-10 lg:py-20 relative"
     style={{
       backgroundImage: `linear-gradient(to right, rgba(0, 141, 170, 0.66), rgba(219, 220, 55, 0.66)), url(${topBanner.src})`,
       backgroundSize: 'cover',
@@ -13,11 +13,11 @@ const HeroSAM = () => {
       backgroundRepeat: 'no-repeat'
     }}>
       
-      <div className="flex flex-col max-w-5xl mx-auto  gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start">
-        <h1 className="text-white text-[41px] font-semibold">
+      <div className="flex flex-col max-w-5xl mx-auto  gap-6 sm:gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start">
+        <h1 className="text-white text-2xl sm:text-[36px] lg:text-[41px] font-semibold">
         IMPIANTI ELETTRICI E MECCANICI<br/>IN UN’UNICA SQUADRA
         </h1>
-        <p className="text-white text-[23px]">
+        <p className="text-white text-sm sm:text-lg lg:text-[23px] leading-relaxed sm:leading-normal">
         Ci occupiamo della realizzazione e manutenzione di impianti industriali e residenziali nel settore idraulico,
         climatizzazione, riscaldamento, gas, antincendio ed elettrico.<br/>Competenza professionale e solido background ci permettono di curare l’esecuzione delle opere fino al collaudo finale.<br/>
 <span className="font-semibold">Progettiamo soluzioni per aziende, privati e Pubbliche Amministrazioni, garantendo sempre la stessa attenzione e qualità.</span>

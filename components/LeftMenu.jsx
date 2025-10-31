@@ -116,7 +116,7 @@ export default function LeftMenu({ typeOfEntry }) {
 
 	if (loading) {
 		return (
-			<div className="w-1/4 p-4">
+			<div className="w-full lg:w-1/4 px-4 py-6">
 				<div className="animate-pulse">
 					<div className="h-6 bg-gray-300 rounded mb-4"></div>
 					<div className="h-4 bg-gray-300 rounded mb-2"></div>
@@ -128,7 +128,7 @@ export default function LeftMenu({ typeOfEntry }) {
 
 	if (error) {
 		return (
-			<div className="w-1/4 p-4 bg-red-100">
+			<div className="w-full lg:w-1/4 px-4 py-6 bg-red-100">
 				<p className="text-red-600">Errore nel caricamento del menu</p>
 				<button
 					onClick={fetchData}
@@ -141,19 +141,19 @@ export default function LeftMenu({ typeOfEntry }) {
 	}
 
 	return (
-		<div className="w-1/4 p-4">
+		<div className="w-full lg:w-1/4 px-4 py-6">
 			{menuData.map((section, sectionIndex) => (
 				<div key={sectionIndex} className="mb-6">
-					<h3 className="font-bold text-[#008DAA] mb-3">{section.label}</h3>
+					<h3 className="font-bold text-[#008DAA] mb-3 text-lg">{section.label}</h3>
 					{section.children.map((category, categoryIndex) => (
 						<div key={categoryIndex} className="mb-4 ml-2">
-							<h4 className="font-medium text-[#008DAA] mb-2">{category.label + (section.label === 'MANUTENZIONE' && typeOfEntry === 'impiantiMeccanici' ? '/Industriali' : '') }</h4>
+							<h4 className="font-medium text-[#008DAA] mb-2 text-sm sm:text-base">{category.label + (section.label === 'MANUTENZIONE' && typeOfEntry === 'impiantiMeccanici' ? '/Industriali' : '') }</h4>
 							<ul className="space-y-1">
 								{category.children.map((item, itemIndex) => (
 									<li key={itemIndex}>
 										<Link
 											href={item.href}
-											className="text-sm text-[#043C48] hover:text-[#008DAA] hover:underline block py-1 ml-4"
+											className="text-sm text-[#043C48] hover:text-[#008DAA] hover:underline block py-1 pl-4"
 										>
 											{item.label}
 										</Link>

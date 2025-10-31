@@ -14,26 +14,28 @@ export default function Home() {
     <>
       <Suspense>
         <Header currentPage="/servizi" />
-        <section className='w-full flex flex-row gap-4 bg-[#acd9e3] p-4'>
-          <div className='flex flex-row max-w-7xl mx-auto w-full'>
-          <div className='w-1/3 text-left'>
-            <h2 className='text-[24px] font-semibold text-[#043C48]'>Dalla grande azienda al<br/>privato, supportiamo<br/>ogni cliente garantendo<br/>la stessa qualità.</h2>
-            <p className='text-[18px] text-[#043C48] mt-4'>
-              Che sia un impianto complesso o<br/>una piccola manutenzione, siamo il<br/>partner ideale per la progettazione<br/>e la gestione di sistemi elettrici e<br/>meccanici in ambito industriale, retail<br/>e residenziale.
-            </p>
-          </div>
-          <div className='w-1/3 text-center pt-12'>
-            <ServiceCard title={["impianti e", "manutenzione", "MECCANICA"]} href='/meccanico' imageSrc={bgMeccanico.src}  />
-          </div>
-          <div className='w-1/3 text-center pt-12'>
-            <ServiceCard title={["impianti e", "manutenzione", "ELETTRICA"]} href='/elettrico' imageSrc={bgElettrico.src}  />
-          </div>
+        <section className='w-full bg-[#acd9e3] px-6 sm:px-8 py-10 lg:py-14'>
+          <div className='flex flex-col lg:flex-row max-w-7xl mx-auto w-full gap-8 lg:gap-10 items-center lg:items-start'>
+            <div className='w-full lg:w-1/3 text-left'>
+              <h2 className='text-2xl sm:text-[24px] font-semibold text-[#043C48] leading-snug'>
+                Dalla grande azienda al<br className="hidden sm:block"/>privato, supportiamo<br className="hidden sm:block"/>ogni cliente garantendo<br className="hidden sm:block"/>la stessa qualità.
+              </h2>
+              <p className='mt-4 text-base sm:text-[18px] leading-relaxed text-[#043C48]'>
+                Che sia un impianto complesso o una piccola manutenzione,<br className="hidden sm:block"/>siamo il partner ideale per la progettazione e la gestione di sistemi elettrici e meccanici in ambito industriale, retail e residenziale.
+              </p>
+            </div>
+            <div className='w-full lg:w-1/3 text-center pt-6 lg:pt-12'>
+              <ServiceCard title={["impianti e", "manutenzione", "MECCANICA"]} href='/meccanico' imageSrc={bgMeccanico.src} className="w-full max-w-sm mx-auto" />
+            </div>
+            <div className='w-full lg:w-1/3 text-center pt-6 lg:pt-12'>
+              <ServiceCard title={["impianti e", "manutenzione", "ELETTRICA"]} href='/elettrico' imageSrc={bgElettrico.src} className="w-full max-w-sm mx-auto" />
+            </div>
           </div>
         </section>
       </Suspense>
-      <main className="max-w-7xl mx-auto w-full">
-        <div className="grid gap-10 lg:grid-cols-5 lg:gap-0">
-          <article className="flex flex-col gap-8 bg-white px-4 py-7 lg:flex-row lg:items-center lg:gap-8 lg:px-6 lg:py-7 col-span-3">
+      <main className="max-w-7xl mx-auto w-full px-6 sm:px-8 py-12 lg:py-16">
+        <div className="grid gap-8 lg:grid-cols-5 lg:gap-0">
+          <article className="flex flex-col gap-8 bg-white px-5 py-8 lg:flex-row lg:items-center lg:gap-8 lg:px-6 lg:py-7 col-span-3 rounded-3xl">
             <div className="mx-auto flex h-40 w-40 shrink-0 items-center justify-center overflow-hidden rounded-full lg:mx-0 lg:h-48 lg:w-48">
               <Image
                 src={bgMeccanico}
@@ -44,7 +46,7 @@ export default function Home() {
                 priority
               />
             </div>
-            <div className="text-left text-[#014A5C]">
+            <div className="text-center lg:text-left text-[#014A5C]">
               <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#0A7D93]">
                 Impianti meccanici
               </p>
@@ -52,7 +54,7 @@ export default function Home() {
                 Acqua calda sanitaria, raffrescamento, raffreddamento e
                 deumidificazione
               </h3>
-              <p className="mt-4 text-base leading-relaxed text-[#023F50]">
+              <p className="mt-4 text-base sm:text-lg leading-relaxed text-[#023F50]">
                 Grazie ad un ufficio tecnico dedicato alla progettazione e
                 direzione lavori, studiamo la migliore soluzione con un
                 approccio che prevede la Risk Analisys e un sistema di gestione
@@ -61,14 +63,14 @@ export default function Home() {
             </div>
           </article>
 
-          <article className="flex flex-col justify-center gap-8 bg-[#008DAA] px-5 py-7 text-white lg:px-7 lg:py-8 col-span-2">
+          <article className="flex flex-col justify-center gap-8 bg-[#008DAA] px-5 py-8 text-white lg:px-7 lg:py-8 col-span-2 mt-6 lg:mt-0">
             <p className="text-xs font-semibold uppercase tracking-[0.4em] text-white/80">
               Manutenzione meccanica
             </p>
             <h3 className="text-2xl font-semibold leading-tight lg:text-3xl">
               Reperibilità tutti i giorni dell&apos;anno, 24 ore su 24
             </h3>
-            <p className="text-base leading-relaxed text-white/90">
+            <p className="text-base sm:text-lg leading-relaxed text-white/90">
               Garantiamo interventi rapidi H24, know-how specializzato,
               tecnologie all&apos;avanguardia e ricambi sempre disponibili grazie ad
               un magazzino interno. Assicuriamo efficienza, sicurezza e
@@ -76,7 +78,7 @@ export default function Home() {
             </p>
           </article>
 
-          <article className="flex flex-col gap-4 bg-white px-6 py-5 lg:flex-row lg:items-center lg:gap-5 lg:px-6 lg:py-7 col-span-3">
+          <article className="flex flex-col gap-6 bg-white px-5 py-8 lg:flex-row lg:items-center lg:gap-6 lg:px-6 lg:py-7 col-span-3 rounded-3xl mt-6 lg:mt-0">
             <div className="mx-auto flex h-40 w-40 shrink-0 items-center justify-center overflow-hidden rounded-full lg:mx-0 lg:h-48 lg:w-48">
               <Image
                 src={bgElettrico}
@@ -86,14 +88,14 @@ export default function Home() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="text-left text-[#014A5C]">
+            <div className="text-center lg:text-left text-[#014A5C]">
               <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#0A7D93]">
                 Impianti elettrici
               </p>
               <h3 className="mt-3 text-2xl font-semibold leading-tight text-[#03607B] lg:text-3xl">
                 Soluzioni su misura per ogni esigenza: tradizionali e domotiche
               </h3>
-              <p className="mt-4 text-base leading-relaxed text-[#023F50]">
+              <p className="mt-4 text-base sm:text-lg leading-relaxed text-[#023F50]">
                 Grazie ad uno staff interno giovane e dinamico, progettiamo e
                 realizziamo impianti elettrici civili e industriali, tradizionali
                 e domotici, con soluzioni su misura per ogni esigenza. Garantiamo
@@ -102,7 +104,7 @@ export default function Home() {
             </div>
           </article>
 
-          <article className="flex flex-col justify-center gap- bg-[#CFDD24] px-5 py-7 text-[#014A5C] lg:px-7 lg:py-8 col-span-2">
+          <article className="flex flex-col justify-center gap-8 bg-[#CFDD24] px-5 py-8 text-[#014A5C] lg:px-7 lg:py-8 col-span-2 mt-6 lg:mt-0">
             <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#0A7D93]">
               Manutenzione elettrica
             </p>
@@ -110,7 +112,7 @@ export default function Home() {
               Assistenza continua dall&apos;impianto più complesso alla piccola
               manutenzione
             </h3>
-            <p className="text-base leading-relaxed text-[#024356]">
+            <p className="text-base sm:text-lg leading-relaxed text-[#024356]">
               In ambito residenziale e retail, interveniamo su impianti di
               allarme e video sorveglianza, videocitofonia, automazione e
               fotovoltaico, rilevazione fumi e incendi, impianti Tv e FTTH, con

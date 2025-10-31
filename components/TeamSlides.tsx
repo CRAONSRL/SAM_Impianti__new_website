@@ -37,20 +37,20 @@ const SLIDES_3 = [
 
 const TeamSlides = () => {
   return (
-    <section className="w-full flex flex-col gap-8 lg:gap-10 px-8 py-8 lg:py-20" id="la-squadra">
-      <h2 className="text-[39px] text-[#008DAA] text-center w-full">
+    <section className="w-full flex flex-col gap-8 lg:gap-10 px-6 sm:px-8 py-12 lg:py-20" id="la-squadra">
+      <h2 className="text-3xl sm:text-[39px] text-[#008DAA] text-center w-full">
         La squadra
       </h2>
-      <div className="flex flex-col max-w-7xl mx-auto gap-3 lg:gap-5 bg-white w-full">
-        <h2 className="text-[27px] font-bold text-[#008DAA]">Team Impianti Meccanici</h2>
+      <div className="flex flex-col max-w-7xl mx-auto gap-4 lg:gap-5 bg-white w-full px-4 sm:px-6 py-6 sm:py-8 rounded-2xl">
+        <h2 className="text-xl sm:text-[27px] font-bold text-[#008DAA]">Team Impianti Meccanici</h2>
         <EmblaCarousel slides={SLIDES} options={OPTIONS} typeName="meccanica" autoClickDotIndex={0} />
       </div>
-      <div className="flex flex-col max-w-7xl mx-auto gap-3 lg:gap-5 bg-white w-full">
-        <h2 className="text-[27px] font-bold text-[#008DAA]">Team Impianti Elettrici</h2>
+      <div className="flex flex-col max-w-7xl mx-auto gap-4 lg:gap-5 bg-white w-full px-4 sm:px-6 py-6 sm:py-8 rounded-2xl">
+        <h2 className="text-xl sm:text-[27px] font-bold text-[#008DAA]">Team Impianti Elettrici</h2>
         <EmblaCarousel slides={SLIDES_2} options={OPTIONS} typeName="elettrico" autoClickDotIndex={0} />
       </div>
-      <div className="flex flex-col max-w-7xl mx-auto gap-3 lg:gap-5 bg-white w-full">
-        <h2 className="text-[27px] font-bold text-[#008DAA]">Uffici</h2>
+      <div className="flex flex-col max-w-7xl mx-auto gap-4 lg:gap-5 bg-white w-full px-4 sm:px-6 py-6 sm:py-8 rounded-2xl">
+        <h2 className="text-xl sm:text-[27px] font-bold text-[#008DAA]">Uffici</h2>
         <EmblaCarousel slides={SLIDES_3} options={OPTIONS} typeName="amministrazione" autoClickDotIndex={0} />
       </div>
     </section>

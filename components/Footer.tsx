@@ -26,7 +26,7 @@ const Footer = () => {
 
             <p className="hidden lg:block mt-3 text-sm text-white/60">
               Copyright © {new Date().getFullYear()} - All rights reserved<br/>
-              Terms of use and Privacy Policy<br />Designed By&nbsp;
+              <Link href="/privacy-policy" className="text-white">Privacy Policy</Link><br />Designed By&nbsp;
               <Link href="https://www.officinacreativa25.com" target="_blank" className="text-white">Officina Creativa 25</Link> &&nbsp; 
               <Link href="https://www.craon.it" target="_blank" className="text-white">Craon S.r.l.</Link>
             </p>
@@ -74,7 +74,7 @@ const Footer = () => {
           <div className="lg:hidden flex flex-row justify-center items-center gap-2 text-center mt-10">
             <p className="mt-3 text-sm text-white/60">
               Copyright © {new Date().getFullYear()} - All rights reserved<br/>
-              Terms of use and Privacy Policy<br />Designed By&nbsp;
+              <Link href="/privacy-policy" className="text-white">Privacy Policy</Link><br />Designed By&nbsp;
               <Link href="https://www.officinacreativa25.com" target="_blank" className="text-white">Officina Creativa 25</Link> &&nbsp; 
               <Link href="https://www.craon.it" target="_blank" className="text-white">Craon S.r.l.</Link>
             </p>
